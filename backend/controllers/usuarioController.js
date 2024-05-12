@@ -1,4 +1,5 @@
 import usuarioModel from '../models/usuarioModel.js';
+import * as bd from '../database/storage.js';
 
 function setUsuario(req, res) {
   res.status(201).json({ message: 'Usuario setUsuario' });
@@ -12,8 +13,14 @@ function getAllUsuario(req, res) {
   res.status(201).json({ message: 'Usuario getAllUsuario' });
 }
 
-function createUsuario(req, res) {
-  res.status(201).json({ message: 'Usuario createUsuario' });
+async function createUsuario(req, res) {
+  try {
+    const result = await bd.obtenerUsuarios();
+    res.status(201).json({ message: 'Usuario createUsuario', result: result });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Error createUsuario' });
+  }
 }
 
 function updateUsuario(req, res) {
