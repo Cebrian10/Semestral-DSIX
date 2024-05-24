@@ -1,12 +1,19 @@
 import './App.css'
-import Formulario from './components/Formulario'
+
+import "primereact/resources/themes/saga-blue/theme.css"
+import "primereact/resources/primereact.min.css"
+import "primeicons/primeicons.css"
+
+import Nav from './components/Nav'
 
 function App() {
-   
+
 
   return (
     <>
-    <Formulario/>
+      <nav>
+        <Nav />
+      </nav>
     </>
   )
 }
