@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { postUsuario } from '../services/usuarioService';
 
+import { Button } from 'primereact/button';
+        
 function Formulario() {
   const [nombre, setNombre] = useState('');
   const [email, setEmail] = useState('');
@@ -27,6 +29,8 @@ function Formulario() {
 
   return (
     <div>
+      <Button label="Submit" />
+      
       <h2>Formulario de Contacto</h2>
       <form onSubmit={handleSubmit}>
         <div>

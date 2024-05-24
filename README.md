@@ -3,6 +3,11 @@ Este proyecto es una página que se trata de...
 
 ## Antes de iniciar
 
+### En caso de no poder ejecutar scripts en la consola, utilizar el siguiente comando:
+```
+Set-ExecutionPolicy -Scope CurrentUser unrestricted
+```
+
 ### En caso de no tener instalado pnpm, utilizar el siguiente comando:
 ```
 npm install -g pnpm
@@ -29,6 +34,7 @@ La parte del frontend desarrollada con Next.JS, un framework de Node.js para la 
 - [@react-native-vector-icons/fontawesome6](https://www.npmjs.com/package/@react-native-vector-icons/fontawesome6): Iconos de Font Awesome versión 6 para React Native.
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) usa [Babel](https://babeljs.io/) para una rapida actualizacion
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) utiliza [SWC](https://swc.rs/) para una rápida actualización
+- [primereact](https://www.npmjs.com/package/primereact): Biblioteca de componentes de UI para React.
 
 
 ## Backend
