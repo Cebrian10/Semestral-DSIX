@@ -3,6 +3,9 @@ import { Menubar } from 'primereact/menubar';
 import { InputText } from 'primereact/inputtext';
 import { Badge } from 'primereact/badge';
 import { Avatar } from 'primereact/avatar';
+import { Link } from 'react-router-dom';
+
+import '../assets/css/Nav.css'
 
 function App() {
     const itemRenderer = (item) => (
@@ -15,70 +18,32 @@ function App() {
     );
     const items = [
         {
-            label: 'Home',
-            icon: 'pi pi-home'
+            label: 'Inicio',
+            icon: 'pi pi-home',
+            url: '/'
         },
         {
-            label: 'Features',
-            icon: 'pi pi-star'
+            label: 'Blog',
+            icon: 'pi pi-pencil',
+            url: '/about'
+        },
+        ,        
+        {
+            label: 'Contacto',
+            icon: 'pi pi-phone',            
         },
         {
-            label: 'Projects',
-            icon: 'pi pi-search',
-            items: [
-                {
-                    label: 'Core',
-                    icon: 'pi pi-bolt',
-                    shortcut: '⌘+S',
-                    template: itemRenderer
-                },
-                {
-                    label: 'Blocks',
-                    icon: 'pi pi-server',
-                    shortcut: '⌘+B',
-                    template: itemRenderer
-                },
-                {
-                    label: 'UI Kit',
-                    icon: 'pi pi-pencil',
-                    shortcut: '⌘+U',
-                    template: itemRenderer
-                },
-                {
-                    separator: true
-                },
-                {
-                    label: 'Templates',
-                    icon: 'pi pi-palette',
-                    items: [
-                        {
-                            label: 'Apollo',
-                            icon: 'pi pi-palette',
-                            badge: 2,
-                            template: itemRenderer
-                        },
-                        {
-                            label: 'Ultima',
-                            icon: 'pi pi-palette',
-                            badge: 3,
-                            template: itemRenderer
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            label: 'Contact',
-            icon: 'pi pi-envelope',
-            badge: 3,
-            template: itemRenderer
+            label: 'Preguntas frecuentes',
+            icon: 'pi pi-comments'
         }
     ];
 
-    const start = <img alt="logo" src="https://primefaces.org/cdn/primereact/images/logo.png" height="40" className="mr-2"></img>;
+    const start = (
+        <img src="../src/assets/img/logo.png" alt="logo" />        
+    );
     const end = (
         <div className="flex align-items-center gap-2">
-            <InputText placeholder="Search" type="text" className="w-8rem sm:w-auto" />
+            <InputText placeholder="Buscar evento..." type="text" className="w-8rem sm:w-auto" />
             <Avatar image="https://primefaces.org/cdn/primereact/images/avatar/amyelsner.png" shape="circle" />
         </div>
     );
