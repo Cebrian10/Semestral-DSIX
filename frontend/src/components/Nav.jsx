@@ -1,45 +1,36 @@
 import React from "react"
+
 import { Menubar } from 'primereact/menubar';
 import { InputText } from 'primereact/inputtext';
-import { Badge } from 'primereact/badge';
 import { Avatar } from 'primereact/avatar';
-import { Link } from 'react-router-dom';
-
-import '../assets/css/Nav.css'
 
 function App() {
-    const itemRenderer = (item) => (
-        <a className="flex align-items-center p-menuitem-link">
-            <span className={item.icon} />
-            <span className="mx-2">{item.label}</span>
-            {item.badge && <Badge className="ml-auto" value={item.badge} />}
-            {item.shortcut && <span className="ml-auto border-1 surface-border border-round surface-100 text-xs p-1">{item.shortcut}</span>}
-        </a>
-    );
+
     const items = [
         {
             label: 'Inicio',
             icon: 'pi pi-home',
-            url: '/'
+            url: '/home'
         },
         {
             label: 'Blog',
             icon: 'pi pi-pencil',
-            url: '/about'
+            url: '/blog'
         },
-        ,        
         {
             label: 'Contacto',
-            icon: 'pi pi-phone',            
+            icon: 'pi pi-phone',
+            url: '/contact'
         },
         {
             label: 'Preguntas frecuentes',
-            icon: 'pi pi-comments'
+            icon: 'pi pi-comments',
+            url: '/question'
         }
     ];
 
     const start = (
-        <img src="../src/assets/img/logo.png" alt="logo" />        
+        <img src="../src/assets/img/logo.png" alt="logo" />
     );
     const end = (
         <div className="flex align-items-center gap-2">
